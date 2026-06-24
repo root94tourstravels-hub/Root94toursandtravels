@@ -1,0 +1,527 @@
+/* ============================================================
+   ROOT94 TOURS & TRAVELS — RESPONSIVE STYLESHEET
+   Breakpoints: 1399px / 1199px / 991px / 767px / 575px / 420px
+   ============================================================ */
+
+/* ---------- LARGE DESKTOPS (max-width: 1399px) ---------- */
+@media (max-width: 1399px) {
+  .hero-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .section-title-wrap h2 {
+    font-size: 2.3rem;
+  }
+
+  .cta-section {
+    padding: 50px;
+  }
+}
+
+/* ---------- DESKTOPS / SMALL LAPTOPS (max-width: 1199px) ---------- */
+@media (max-width: 1199px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p.hero-subtitle {
+    font-size: 1.05rem;
+    max-width: 500px;
+  }
+
+  .section-padding {
+    padding: 75px 0;
+  }
+
+  .quick-booking-strip {
+    margin-top: -55px;
+  }
+
+  .quick-booking-card {
+    padding: 24px;
+  }
+
+  .about-exp-badge {
+    width: 120px;
+    height: 120px;
+    right: -10px;
+    bottom: -15px;
+  }
+
+  .about-exp-badge h3 {
+    font-size: 1.7rem;
+  }
+
+  .stat-box h3 {
+    font-size: 2.3rem;
+  }
+
+  .cta-section {
+    padding: 44px 36px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .form-card {
+    padding: 34px;
+  }
+}
+
+/* ---------- TABLETS (max-width: 991px) ---------- */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: var(--white);
+    margin-top: 14px;
+    border-radius: var(--radius-md);
+    padding: 18px;
+    box-shadow: var(--shadow-md);
+  }
+
+  [data-theme="dark"] .navbar-collapse {
+    background: var(--off-white);
+  }
+
+  .navbar .nav-link {
+    margin: 4px 0;
+    padding: 8px 4px !important;
+  }
+
+  .btn-nav-book {
+    margin: 10px 0 0;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .hero-slider {
+    height: 92vh;
+    min-height: 560px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p.hero-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  .quick-booking-strip {
+    margin-top: 30px;
+    position: static;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .section-title-wrap h2 {
+    font-size: 2rem;
+  }
+
+  .about-image-wrap {
+    margin-bottom: 50px;
+  }
+
+  .about-exp-badge {
+    width: 110px;
+    height: 110px;
+  }
+
+  .feature-strip .feature-item {
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+
+  .stats-section .stat-box {
+    margin-bottom: 30px;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
+
+  .cta-section .text-end {
+    text-align: center !important;
+    margin-top: 20px;
+  }
+
+  .footer-widget {
+    margin-bottom: 36px;
+  }
+
+  .form-card {
+    padding: 28px;
+  }
+
+  .vehicle-select-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-header {
+    padding: 130px 0 70px;
+  }
+
+  .page-header-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ---------- MOBILE LANDSCAPE / LARGE PHONES (max-width: 767px) ---------- */
+@media (max-width: 767px) {
+  .hero-slider {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 0 60px;
+  }
+
+  .hero-content {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-content .container > .row {
+    justify-content: center;
+  }
+
+  .hero-badge {
+    font-size: 0.78rem;
+    padding: 7px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-btn-group {
+    justify-content: center;
+  }
+
+  .btn-root94-primary,
+  .btn-root94-outline,
+  .btn-root94-blue {
+    padding: 12px 26px;
+    font-size: 0.92rem;
+  }
+
+  .hero-dots {
+    bottom: 18px;
+  }
+
+  .section-title-wrap h2 {
+    font-size: 1.7rem;
+  }
+
+  .section-title-wrap p {
+    font-size: 0.95rem;
+  }
+
+  .service-card,
+  .why-choose-card,
+  .value-card {
+    padding: 28px 20px;
+  }
+
+  .package-img-wrap {
+    height: 200px;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .feature-item i {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 26px;
+  }
+
+  .gallery-item img {
+    height: 220px;
+  }
+
+  .gallery-filter-btns button {
+    padding: 7px 18px;
+    font-size: 0.85rem;
+    margin: 0 4px 8px;
+  }
+
+  .cta-section {
+    padding: 36px 24px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-section::before {
+    font-size: 9rem;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer-bottom .text-end {
+    text-align: center !important;
+    margin-top: 10px;
+  }
+
+  .map-wrap iframe {
+    height: 320px;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline-item::before {
+    left: -39px;
+  }
+
+  .floating-buttons {
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .float-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .page-header {
+    padding: 110px 0 60px;
+  }
+
+  .page-header-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb-custom {
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- SMALL PHONES (max-width: 575px) ---------- */
+@media (max-width: 575px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .navbar-brand img {
+    height: 32px;
+  }
+
+  .loader-logo {
+    font-size: 1.7rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content p.hero-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-btn-group .btn-root94-primary,
+  .hero-btn-group .btn-roote94-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .quick-booking-card {
+    padding: 18px;
+  }
+
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .section-padding-sm {
+    padding: 40px 0;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+    padding: 6px 14px;
+  }
+
+  .section-title-wrap h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-exp-badge {
+    width: 90px;
+    height: 90px;
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .about-exp-badge h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-exp-badge span {
+    font-size: 0.65rem;
+  }
+
+  .service-card .service-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .service-card .service-icon i {
+    font-size: 1.6rem;
+  }
+
+  .package-body {
+    padding: 18px;
+  }
+
+  .fleet-body {
+    padding: 18px;
+  }
+
+  .stat-box h3 {
+    font-size: 1.9rem;
+  }
+
+  .stat-box i {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-author img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-card {
+    padding: 22px;
+  }
+
+  .vehicle-select-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .vehicle-option {
+    padding: 12px 8px;
+  }
+
+  .vehicle-option i {
+    font-size: 1.3rem;
+  }
+
+  .contact-info-card {
+    padding: 22px;
+  }
+
+  .footer-widget h5 {
+    font-size: 1.05rem;
+  }
+
+  .float-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 1.15rem;
+  }
+
+  .floating-buttons {
+    bottom: 14px;
+    right: 14px;
+    gap: 10px;
+  }
+
+  .page-header-content h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- EXTRA SMALL PHONES (max-width: 420px) ---------- */
+@media (max-width: 420px) {
+  .hero-content h1 {
+    font-size: 1.45rem;
+  }
+
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  .section-title-wrap h2 {
+    font-size: 1.3rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.15rem;
+  }
+
+  .vehicle-select-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-filter-btns button {
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    margin: 0 3px 8px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.35rem;
+  }
+
+  .stat-box h3 {
+    font-size: 1.6rem;
+  }
+
+  .footer-brand {
+    font-size: 1.3rem;
+  }
+}
+
+/* ---------- LANDSCAPE MOBILE FIX ---------- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero-slider {
+    min-height: 100vh;
+    padding: 100px 0 40px;
+  }
+
+  #loading-screen {
+    display: none;
+  }
+}
+
+/* ---------- PRINT STYLES ---------- */
+@media print {
+  .navbar,
+  .floating-buttons,
+  .footer-social,
+  #loading-screen {
+    display: none !important;
+  }
+}
