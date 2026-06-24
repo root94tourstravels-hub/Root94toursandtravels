@@ -7,34 +7,23 @@
 
   var ROOT94_WHATSAPP_NUMBER = "918015514116"; 
   
-  // Initialize EmailJS here as well for booking page
-  emailjs.init("wD3FJZtPeubZ7PbPi");
+  // Initialize EmailJS here as well for booking page.
+  // Guarded so a blocked/slow EmailJS CDN script doesn't throw and stop the
+  // rest of this file (vehicle selector, passenger counter, validation, etc.)
+  // from running.
+  try {
+    if (window.emailjs) {
+      emailjs.init("wD3FJZtPeubZ7PbPi");
+    } else {
+      console.warn("EmailJS SDK not available — booking form will fall back to WhatsApp only.");
+    }
+  } catch (err) {
+    console.error("EmailJS init failed:", err);
+  }
 
   document.addEventListener("DOMContentLoaded", function () {
     var bookingForm = document.getElementById("bookingForm");
     if (!bookingForm) return;
-
-    /* ---------- 1. VEHICLE TYPE SELECTOR ---------- */
-    var vehicleOptions = document.querySelectorAll(".vehicle-option");
-    var vehicleTypeHiddenInput = document.getElementById("vehicleType");
-
-    vehicleOptions.forEach(function (option) {
-      option.addEventListener("click", function () {
-        vehicleOptions.forEach(function (o) {
-          o.classList.remove("selected");
-        });
-        option.classList.add("selected");
-
-        var radioInput = option.querySelector("input[type='radio']");
-        if (radioInput) {
-          radioInput.checked = true;
-        }
-        if (vehicleTypeHiddenInput) {
-          vehicleTypeHiddenInput.value = option.getAttribute("data-vehicle-name") || "";
-        }
-        clearFieldError("vehicleTypeError");
-      });
-    });
 
     /* ---------- 2. PASSENGER COUNTER ---------- */
     var passengerInput = document.getElementById("passengers");
@@ -100,8 +89,6 @@
       var pickupLocation = document.getElementById("pickupLocation").value.trim();
       var destination = document.getElementById("destination").value.trim();
       var travelDate = document.getElementById("travelDate").value;
-      var pickupTime = document.getElementById("pickupTime").value;
-      var vehicleType = vehicleTypeHiddenInput ? vehicleTypeHiddenInput.value : "";
       var passengers = document.getElementById("passengers").value;
       var specialMessage = document.getElementById("specialMessage").value.trim();
 
@@ -110,13 +97,6 @@
       if (!pickupLocation) { setFieldError("pickupLocation", "Pickup required."); isValid = false; }
       if (!destination) { setFieldError("destination", "Destination required."); isValid = false; }
       if (!travelDate) { setFieldError("travelDate", "Date required."); isValid = false; }
-      if (!pickupTime) { setFieldError("pickupTime", "Time required."); isValid = false; }
-      if (!vehicleType) { 
-        var vErr = document.getElementById("vehicleTypeError");
-        if(vErr) vErr.classList.remove("d-none");
-        isValid = false; 
-      }
-
       if (!isValid) return;
 
       var bookingRefId = generateBookingRefId();
@@ -134,14 +114,28 @@
         pickup_location: pickupLocation,
         destination: destination,
         travel_date: formatDateForDisplay(travelDate),
-        pickup_time: formatTimeForDisplay(pickupTime),
-        vehicle_type: vehicleType,
         passengers: passengers,
         special_message: specialMessage || "None"
       };
       window._root94LastBooking = bookingData;
 
       // Actual EmailJS Sending
+      // Guarded: if the EmailJS SDK failed to load (blocked/slow CDN), skip
+      // straight to the existing WhatsApp fallback instead of throwing an
+      // uncaught error and leaving the submit button stuck on "Processing...".
+      if (!window.emailjs) {
+        console.warn("EmailJS SDK not available — booking will proceed via WhatsApp only.");
+        showBookingSuccessModal(bookingData);
+        var fallbackWhatsappURL = buildWhatsAppURL(bookingData);
+        setTimeout(function () {
+          window.open(fallbackWhatsappURL, "_blank");
+        }, 800);
+        bookingForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+        return;
+      }
+
       emailjs.send("service_xzu2sss", "template_snzkwug", bookingData)
       .then(function () {
         showBookingSuccessModal(bookingData);
@@ -153,7 +147,6 @@
         }, 800);
 
         bookingForm.reset();
-        vehicleOptions.forEach(function (o) { o.classList.remove("selected"); });
       })
       .catch(function (err) {
         console.error("Booking Error:", err);
@@ -177,21 +170,13 @@
       return dateObj.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
     }
 
-    function formatTimeForDisplay(timeStr) {
-      if (!timeStr) return "N/A";
-      var parts = timeStr.split(":");
-      var hours = parseInt(parts[0], 10);
-      var ampm = hours >= 12 ? "PM" : "AM";
-      return (hours % 12 || 12) + ":" + parts[1] + " " + ampm;
-    }
-
     function buildWhatsAppURL(data) {
       var msg = "*NEW BOOKING REQUEST — ROOT94*\n" +
         "*Ref:* " + data.refId + "\n" +
         "*Name:* " + data.customer_name + "\n" +
         "*Route:* " + data.pickup_location + " to " + data.destination + "\n" +
-        "*Date:* " + data.travel_date + " @ " + data.pickup_time + "\n" +
-        "*Vehicle:* " + data.vehicle_type + " (" + data.passengers + " pax)";
+        "*Date:* " + data.travel_date + "\n" +
+        "*Passengers:* " + data.passengers + " pax";
       return "https://wa.me/" + ROOT94_WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
     }
 
