@@ -1,5 +1,5 @@
 /* ============================================================
-   ROOT94 TOURS & TRAVELS — ANIMATION CONTROLLER
+   ROot94 TOURS & TRAVELS — ANIMATION CONTROLLER
    AOS Initialization | Scroll-Triggered Effects | Parallax
    ============================================================ */
 

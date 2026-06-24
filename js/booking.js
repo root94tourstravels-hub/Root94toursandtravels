@@ -7,19 +7,8 @@
 
   var ROOT94_WHATSAPP_NUMBER = "918015514116"; 
   
-  // Initialize EmailJS here as well for booking page.
-  // Guarded so a blocked/slow EmailJS CDN script doesn't throw and stop the
-  // rest of this file (vehicle selector, passenger counter, validation, etc.)
-  // from running.
-  try {
-    if (window.emailjs) {
-      emailjs.init("wD3FJZtPeubZ7PbPi");
-    } else {
-      console.warn("EmailJS SDK not available — booking form will fall back to WhatsApp only.");
-    }
-  } catch (err) {
-    console.error("EmailJS init failed:", err);
-  }
+  // Initialize EmailJS here as well for booking page
+  emailjs.init("wD3FJZtPeubZ7PbPi");
 
   document.addEventListener("DOMContentLoaded", function () {
     var bookingForm = document.getElementById("bookingForm");
@@ -153,23 +142,6 @@
       window._root94LastBooking = bookingData;
 
       // Actual EmailJS Sending
-      // Guarded: if the EmailJS SDK failed to load (blocked/slow CDN), skip
-      // straight to the existing WhatsApp fallback instead of throwing an
-      // uncaught error and leaving the submit button stuck on "Processing...".
-      if (!window.emailjs) {
-        console.warn("EmailJS SDK not available — booking will proceed via WhatsApp only.");
-        showBookingSuccessModal(bookingData);
-        var fallbackWhatsappURL = buildWhatsAppURL(bookingData);
-        setTimeout(function () {
-          window.open(fallbackWhatsappURL, "_blank");
-        }, 800);
-        bookingForm.reset();
-        vehicleOptions.forEach(function (o) { o.classList.remove("selected"); });
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalBtnText;
-        return;
-      }
-
       emailjs.send("service_xzu2sss", "template_snzkwug", bookingData)
       .then(function () {
         showBookingSuccessModal(bookingData);

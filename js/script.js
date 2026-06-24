@@ -5,53 +5,22 @@
 
 (function () {
   "use strict";
+  
+  // Initialize EmailJS with the correct Public Key
+  emailjs.init("wD3FJZtPeubZ7PbPi");
 
   /* ---------- 1. LOADING SCREEN ---------- */
-  /* Hides the loader as soon as the DOM is ready (does not wait on slow/blocked
-     external CDN assets like fonts, Bootstrap, AOS, EmailJS), and includes a
-     hard-timeout safety net so the loader is GUARANTEED to disappear even in
-     the worst case (slow network, blocked CDN, or any later script error). */
-  (function setupLoader() {
-    var loaderHidden = false;
-
-    function hideLoader() {
-      if (loaderHidden) return;
-      loaderHidden = true;
-      var loader = document.getElementById("loading-screen");
-      if (loader) {
+  window.addEventListener("load", function () {
+    var loader = document.getElementById("loading-screen");
+    if (loader) {
+      setTimeout(function () {
         loader.classList.add("loaded");
         setTimeout(function () {
           loader.style.display = "none";
         }, 700);
-      }
+      }, 400);
     }
-
-    if (document.readyState === "complete" || document.readyState === "interactive") {
-      setTimeout(hideLoader, 400);
-    } else {
-      document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(hideLoader, 400);
-      });
-    }
-
-    // Safety net: never let the loader stay on screen for more than 5 seconds,
-    // no matter what (slow assets, network issues, etc.)
-    setTimeout(hideLoader, 5000);
-  })();
-
-  // Initialize EmailJS with the correct Public Key.
-  // Guarded so that if the EmailJS CDN script is blocked/slow/fails to load,
-  // this does not throw and halt the rest of script.js (which would otherwise
-  // also stop the navbar, slider, dark mode, and form logic below from running).
-  try {
-    if (window.emailjs) {
-      emailjs.init("wD3FJZtPeubZ7PbPi");
-    } else {
-      console.warn("EmailJS SDK not available — contact/booking forms will fall back to WhatsApp only.");
-    }
-  } catch (err) {
-    console.error("EmailJS init failed:", err);
-  }
+  });
 
   /* ---------- 2. STICKY NAVBAR ON SCROLL ---------- */
   var navbar = document.getElementById("mainNavbar");
@@ -333,7 +302,7 @@
 
     if (whatsappFloatBtn) {
       var defaultMsg = encodeURIComponent(
-        "Hello ROOT94 TOURS & TRAVELS! I would like to enquire about your services."
+        "Hello Root94 Tours & Travels! I would like to enquire about your services."
       );
       whatsappFloatBtn.setAttribute(
         "href",
@@ -391,30 +360,6 @@
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
       // Actual EmailJS Integration
-      // Guarded: if the EmailJS SDK failed to load (blocked/slow CDN), fall
-      // back to the same WhatsApp-assisted flow instead of throwing an
-      // uncaught error and leaving the submit button stuck on "Sending...".
-      if (!window.emailjs) {
-        console.warn("EmailJS SDK not available — falling back to WhatsApp.");
-        showContactAlert("danger", "Email service is unavailable right now. Please use WhatsApp below to reach us instantly.");
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-
-        var fallbackMsg = encodeURIComponent(
-          "Hello ROOT94 TOURS & TRAVELS,\n\nName: " + name +
-          "\nEmail: " + email +
-          "\nPhone: " + phone +
-          "\nSubject: " + (subject || "General Enquiry") +
-          "\nMessage: " + message
-        );
-        var fallbackWaLink = document.getElementById("contactWhatsappFallback");
-        if (fallbackWaLink) {
-          fallbackWaLink.setAttribute("href", "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + fallbackMsg);
-          fallbackWaLink.classList.remove("d-none");
-        }
-        return;
-      }
-
       emailjs.send("service_xzu2sss", "template_yqo6xcp", {
         from_name: name,
         from_email: email,
@@ -428,7 +373,7 @@
 
         // Offer WhatsApp fallback for instant response
         var waMsg = encodeURIComponent(
-          "Hello ROOT94 TOURS & TRAVELS,\n\nName: " + name +
+          "Hello Root94 Tours & Travels,\n\nName: " + name +
           "\nEmail: " + email +
           "\nPhone: " + phone +
           "\nSubject: " + (subject || "General Enquiry") +
