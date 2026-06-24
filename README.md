@@ -1,10 +1,10 @@
-# Root94 Tours & Travels — Official Website
+# ROOT94 TOURS & TRAVELS — Official Website
 
-![Root94 Tours & Travels](images/og-cover.jpg)
+![ROOT94 TOURS & TRAVELS](images/og-cover.jpg)
 
 **Your Journey, Our Responsibility**
 
-A premium, fully responsive travel agency website for **Root94 Tours & Travels**, based in Palani, Tamil Nadu, India. Built with HTML5, CSS3, Bootstrap 5, and vanilla JavaScript — featuring glassmorphism UI, AOS scroll animations, a WhatsApp-integrated booking system, and full dark mode support.
+A premium, fully responsive travel agency website for **ROOT94 TOURS & TRAVELS**, based in Palani, Tamil Nadu, India. Built with HTML5, CSS3, Bootstrap 5, and vanilla JavaScript — featuring glassmorphism UI, AOS scroll animations, a WhatsApp-integrated booking system, and full dark mode support.
 
 ---
 
@@ -30,7 +30,7 @@ A premium, fully responsive travel agency website for **Root94 Tours & Travels**
 
 | | |
 |---|---|
-| **Company** | Roote94 Tours & Travels |
+| **Company** | ROOT94 TOURS & TRAVELS |
 | **Location** | Palani, Tamil Nadu, India |
 | **Tagline** | "Your Journey, Our Responsibility" |
 | **Phone / WhatsApp** | +91 80155 14116 |
@@ -151,7 +151,7 @@ The booking page (`booking.html`) collects the following fields:
 2. A unique booking reference ID is generated (e.g. `R94-260621-4821`).
 3. A **"Booking Request Submitted Successfully!"** confirmation modal is displayed with a summary.
 4. WhatsApp automatically opens (in a new tab) with a pre-filled, formatted message containing all booking details, sent to **+91 80155 14116**.
-5. **No payment gateway is used or required** — payment and fare confirmation happen directly between the customer and Roote94's team.
+5. **No payment gateway is used or required** — payment and fare confirmation happen directly between the customer and ROOT94's team.
 
 This logic lives in `js/booking.js` and is fully commented for easy maintenance.
 
@@ -223,7 +223,7 @@ Change these values once and the entire site updates consistently.
 ### Contact Number
 The WhatsApp/Call number is set in two JavaScript files:
 - `js/script.js` → `WHATSAPP_NUMBER` and `CALL_NUMBER`
-- `js/booking.js` → `ROot94_WHATSAPP_NUMBER`
+- `js/booking.js` → `ROOT94_WHATSAPP_NUMBER`
 
 It also appears as plain text/links across all HTML files (`tel:` and `wa.me` links) — use a find-and-replace across the project if you need to change it.
 
@@ -237,7 +237,7 @@ Copy the structure of an existing page (e.g. `about.html`), update the `<title>`
 
 ## 🖼️ Replacing Placeholder Images
 
-This project references images by filename inside the `images/` folder (e.g. `hero-slide-1.jpg`, `package-arupadai.jpg`, `gallery-1.jpg`, etc.) but does **not** ship with actual photography, since real photos of Root94's fleet, drivers, and locations should be used for an authentic, production-ready site.
+This project references images by filename inside the `images/` folder (e.g. `hero-slide-1.jpg`, `package-arupadai.jpg`, `gallery-1.jpg`, etc.) but does **not** ship with actual photography, since real photos of ROOT94's fleet, drivers, and locations should be used for an authentic, production-ready site.
 
 **To complete the site:**
 1. Gather real photographs of your vehicles, drivers, completed trips, and the Palani office/area.
@@ -297,7 +297,7 @@ Tested and supported on the latest versions of:
 
 ## 👏 Credits
 
-Designed & developed for **Root94 Tours & Travels**, Palani, Tamil Nadu.
+Designed & developed for **ROOT94 TOURS & TRAVELS**, Palani, Tamil Nadu.
 
 > "Your Journey, Our Responsibility"
 
@@ -305,4 +305,4 @@ Designed & developed for **Root94 Tours & Travels**, Palani, Tamil Nadu.
 
 ## 📜 License
 
-This project was custom-built for Root94 Tours & Travels. All brand names, taglines, and business content belong to Root94 Tours & Travels. The underlying code structure may be reused and adapted for similar travel agency projects.
+This project was custom-built for ROOT94 TOURS & TRAVELS. All brand names, taglines, and business content belong to ROOT94 TOURS & TRAVELS. The underlying code structure may be reused and adapted for similar travel agency projects.
