@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now | Root94 Tours & Travels - Palani, Tamil Nadu</title>
+  <meta name="description" content="Book your taxi or tour package with Root94 Tours & Travels, Palani. Quick booking form with instant WhatsApp confirmation — no online payment required.">
+  <meta name="keywords" content="book taxi Palani, Root94 booking, online taxi booking Tamil Nadu, temple tour booking, tempo traveller booking">
+  <meta name="author" content="Root94 Tours & Travels">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Book Now | Root94 Tours & Travels">
+  <meta property="og:description" content="Quick and easy taxi & tour booking — confirmed instantly via WhatsApp, no online payment required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.root94tours.com/booking.html">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .passenger-counter {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .passenger-counter button {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid var(--light-gray);
+      background: var(--off-white);
+      color: var(--primary-blue);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .passenger-counter button:hover {
+      background: var(--gradient-orange);
+      color: var(--white);
+      border-color: transparent;
+    }
+    .passenger-counter input {
+      width: 70px;
+      text-align: center;
+      border: 1.5px solid var(--light-gray);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .invalid-feedback-custom {
+      color: var(--danger-red);
+      font-size: 0.8rem;
+      margin-top: 6px;
+      display: block;
+    }
+    .booking-side-info {
+      position: sticky;
+      top: 110px;
+    }
+    .booking-step-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .booking-step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--gradient-orange);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .booking-step-item h6 {
+      margin-bottom: 4px;
+    }
+    .booking-step-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loading-screen">
+    <div class="loader-logo">Root<span>94</span></div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-root"></i>Root<span>94</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link btn-nav-book active" href="booking.html">Book Now</a></li>
+          <li class="nav-item">
+            <button class="dark-toggle-btn" type="button" aria-label="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="page-header" style="background-image: url('images/booking-header-bg.jpg');">
+    <div class="container page-header-content">
+      <h1 data-aos="fade-up">Book Your Ride</h1>
+      <ul class="breadcrumb-custom" data-aos="fade-up" data-aos-delay="100">
+        <li><a href="index.html">Home</a></li>
+        <li class="separator">/</li>
+        <li class="current">Booking</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============ BOOKING FORM SECTION ============ -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- BOOKING FORM -->
+        <div class="col-lg-8">
+          <div class="form-card" data-aos="fade-up">
+            <div class="section-tag">No Advance Payment Required</div>
+            <h2 class="mb-3">Reserve Your <span class="text-orange">Trip in Minutes</span></h2>
+            <p class="text-muted mb-4">Fill in your travel details below. Once submitted, your request goes straight to our team via WhatsApp for instant confirmation.</p>
+
+            <form id="bookingForm" novalidate>
+              <div class="row g-3">
+
+                <!-- Name -->
+                <div class="col-md-6">
+                  <label class="form-label" for="customerName">Full Name *</label>
+                  <div class="input-icon-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="form-control" id="customerName" name="from_name"
+                     placeholder="Your full name">
+                  </div>
+                  <span class="invalid-feedback-custom d-none" id="customerNameError"></span>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-md-6">
+                  <label class="form-label" for="customerPhone">Phone Number *</label>
+                  <div class="input-icon-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" class="form-control" id="customerPhone" name="from_phone"
+                     placeholder="+91 XXXXX XXXXX">
+                  </div>
+                  <span class="invalid-feedback-custom d-none" id="customerPhoneError"></span>
+                </div>
+
+                <!-- Pickup Location -->
+                <div class="col-md-6">
+                  <label class="form-label" for="pickupLocation">Pickup Location *</label>
+                  <div class="input-icon-group">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" class="form-control" id="pickupLocation" name="pickup_location"
+                     placeholder="e.g. Palani Bus Stand">
+                  </div>
+                  <span class="invalid-feedback-custom d-none" id="pickupLocationError"></span>
+                </div>
+
+                <!-- Destination -->
+                <div class="col-md-6">
+                  <label class="form-label" for="destination">Destination *</label>
+                  <div class="input-icon-group">
+                    <i class="fas fa-flag-checkered"></i>
+                    <input type="text" class="form-control" id="destination" name="destination"
+                    placeholder="e.g. Madurai Airport">
+                  </div>
+                  <span class="invalid-feedback-custom d-none" id="destinationError"></span>
+                </div>
+
+                <!-- Travel Date -->
+                <div class="col-md-6">
+                  <label class="form-label" for="travelDate">Travel Date *</label>
+                  <div class="input-icon-group">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="date" class="form-control" id="travelDate" name="travel_date">
+                  </div>
+                  <span class="invalid-feedback-custom d-none" id="travelDateError"></span>
+                </div>
+
+                <!-- Pickup Time -->
+                <div class="col-md-6">
+                  <label class="form-label" for="pickupTime">Pickup Time *</label>
+                  <div class="input-icon-group">
+                    <i class="fas fa-clock"></i>
+                    <input type="time" class="form-control" id="pickupTime" name="pickup_time">
+                  </div>
+                  <span class="invalid-feedback-custom d-none" id="pickupTimeError"></span>
+                </div>
+
+                <!-- Vehicle Type -->
+                <div class="col-12">
+                  <label class="form-label">Vehicle Type *</label>
+                  <input type="hidden" id="vehicleType" name="vehicle_type" value="">
+                  <div class="vehicle-select-grid">
+                    <label class="vehicle-option" data-vehicle-name="Sedan">
+                      <input type="radio" name="vehicleRadio" value="Sedan">
+                      <i class="fas fa-car-side"></i>
+                      <span>Sedan</span>
+                    </label>
+                    <label class="vehicle-option" data-vehicle-name="SUV">
+                      <input type="radio" name="vehicleRadio" value="SUV">
+                      <i class="fas fa-truck-monster"></i>
+                      <span>SUV</span>
+                    </label>
+                    <label class="vehicle-option" data-vehicle-name="Tempo Traveller">
+                      <input type="radio" name="vehicleRadio" value="Tempo Traveller">
+                      <i class="fas fa-shuttle-van"></i>
+                      <span>Tempo Traveller</span>
+                    </label>
+                    <label class="vehicle-option" data-vehicle-name="Mini Bus">
+                      <input type="radio" name="vehicleRadio" value="Mini Bus">
+                      <i class="fas fa-bus"></i>
+                      <span>Mini Bus</span>
+                    </label>
+                  </div>
+                  <span class="invalid-feedback-custom d-none" id="vehicleTypeError"></span>
+                </div>
+
+                <!-- Passengers -->
+                <div class="col-md-6">
+                  <label class="form-label" for="passengers">Number of Passengers *</label>
+                  <div class="passenger-counter">
+                    <button type="button" id="passengerDecrease" aria-label="Decrease passengers"><i class="fas fa-minus"></i></button>
+                    <input
+                     type="number"
+                     id="passengers" 
+                     name="passengers"
+                     value="1" 
+                     min="1" 
+                     max="50" 
+                     readonly>
+                    <button type="button" id="passengerIncrease" aria-label="Increase passengers"><i class="fas fa-plus"></i></button>
+                  </div>
+                  <span class="invalid-feedback-custom d-none" id="passengersError"></span>
+                </div>
+
+                <!-- Special Message -->
+                <div class="col-12">
+                  <label class="form-label" for="specialMessage">Special Message (Optional)</label>
+                  <textarea
+                   class="form-control" 
+                   id="specialMessage"
+                   name="special_message"
+                   rows="4" 
+                   placeholder="Any special requirements? e.g. child seat, extra luggage space, specific stop-overs..."></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="col-12">
+                  <button type="submit" class="btn-root94-primary w-100 justify-content-center" id="bookingSubmitBtn">
+                    <i class="fas fa-paper-plane"></i> Submit Booking Request
+                  </button>
+                  <p class="text-muted text-center small mt-3 mb-0">
+                    <i class="fas fa-shield-alt text-orange"></i> No payment required now. We'll confirm your fare and trip details directly via WhatsApp.
+                  </p>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- SIDE INFO -->
+        <div class="col-lg-4">
+          <div class="booking-side-info" data-aos="fade-left">
+            <div class="glass-card p-4 mb-4">
+              <h5 class="mb-4"><i class="fas fa-root text-orange"></i> How Booking Works</h5>
+
+              <div class="booking-step-item">
+                <div class="booking-step-number">1</div>
+                <div>
+                  <h6>Fill The Form</h6>
+                  <p>Share your trip details — pickup, destination, date, and vehicle preference.</p>
+                </div>
+              </div>
+
+              <div class="booking-step-item">
+                <div class="booking-step-number">2</div>
+                <div>
+                  <h6>Auto WhatsApp Message</h6>
+                  <p>Your booking details are instantly sent to our team via WhatsApp.</p>
+                </div>
+              </div>
+
+              <div class="booking-step-item">
+                <div class="booking-step-number">3</div>
+                <div>
+                  <h6>We Confirm Your Trip</h6>
+                  <p>Our team verifies availability, shares the fare, and confirms your booking.</p>
+                </div>
+              </div>
+
+              <div class="booking-step-item mb-0">
+                <div class="booking-step-number">4</div>
+                <div>
+                  <h6>Enjoy Your Journey</h6>
+                  <p>Your driver arrives on time, and your journey becomes our responsibility.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card p-4 text-center">
+              <i class="fab fa-whatsapp" style="font-size:2.4rem;color:#25d366;margin-bottom:14px;"></i>
+              <h6 class="mb-2">Prefer to book directly?</h6>
+              <p class="text-muted small mb-3">Skip the form and message us directly for a quick chat-based booking.</p>
+              <a href="https://wa.me/918015514116" class="btn-root94-blue w-100 justify-content-center" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget">
+            <div class="footer-brand"><i class="fas fa-root"></i> Root<span>94</span></div>
+            <p>Root94 Tours & Travels is Palani's trusted travel partner, offering local taxi, outstation trips, temple tours, and all-India travel packages. Your Journey, Our Responsibility.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/918015514116" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-widget">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="packages.html"><i class="fas fa-chevron-right"></i> Tour Packages</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h5>Our Services</h5>
+            <ul class="footer-links">
+              <li><a href="services.html#local-taxi"><i class="fas fa-chevron-right"></i> Local Taxi</a></li>
+              <li><a href="services.html#outstation-taxi"><i class="fas fa-chevron-right"></i> Outstation Taxi</a></li>
+              <li><a href="services.html#airport-pickup"><i class="fas fa-chevron-right"></i> Airport Pickup & Drop</a></li>
+              <li><a href="services.html#temple-tours"><i class="fas fa-chevron-right"></i> Temple Tour Packages</a></li>
+              <li><a href="services.html#tempo-traveller"><i class="fas fa-chevron-right"></i> Tempo Traveller Rental</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h5>Contact Info</h5>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Root94 Tours & Travels, Palani, Tamil Nadu, India</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:+918015514116" class="text-white text-decoration-none">+91 80155 14116</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:root94tourstravels@gmail.com" class="text-white text-decoration-none">root94tourstravels@gmail.com</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Available 24/7 for Bookings</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; <span class="current-year">2026</span> Root94 Tours & Travels. All Rights Reserved.</p>
+        <p class="mb-0 text-end">Designed & Developed with <i class="fas fa-heart text-orange"></i> for Travelers</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING BUTTONS ============ -->
+  <div class="floating-buttons">
+    <a href="#" id="floatWhatsapp" class="float-btn float-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#" id="floatCall" class="float-btn float-call" aria-label="Call Us">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- ============ BOOKING SUCCESS MODAL ============ -->
+  <div class="modal fade" id="bookingSuccessModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius: var(--radius-lg); border:none;">
+        <div class="modal-body text-center p-5">
+          <div class="success-icon-circle">
+            <i class="fas fa-check"></i>
+          </div>
+          <h3 class="mb-2">Booking Request Submitted Successfully!</h3>
+          <p class="text-muted mb-4">We've received your request. A WhatsApp message is opening now with your trip details for our team to confirm.</p>
+
+          <div class="glass-card p-3 mb-4 text-start" id="bookingSuccessSummary">
+            <!-- Filled dynamically by booking.js -->
+          </div>
+
+          <div class="d-flex flex-column gap-2">
+            <button type="button" class="btn-root94-primary w-100 justify-content-center" id="resendWhatsappBtn">
+              <i class="fab fa-whatsapp"></i> Resend via WhatsApp
+            </button>
+            <button type="button" class="btn-root94-blue w-100 justify-content-center" data-bs-dismiss="modal">
+              <i class="fas fa-check"></i> Done
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="js/animation.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/booking.js"></script>
+
+</body>
+</html>

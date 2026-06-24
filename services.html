@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Root94 Tours & Travels - Palani, Tamil Nadu</title>
+  <meta name="description" content="Explore Root94's full range of travel services in Palani: local taxi, outstation taxi, airport pickup, temple tours, tempo traveller rental, corporate travel and more.">
+  <meta name="keywords" content="Root94 services, Palani taxi service, outstation taxi, airport pickup Palani, temple tour package, tempo traveller rental, corporate travel Tamil Nadu">
+  <meta name="author" content="Root94 Tours & Travels">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Our Services | Root94 Tours & Travels">
+  <meta property="og:description" content="Local taxi, outstation taxi, airport pickup, temple tours, tempo traveller rental, corporate travel and more — all in Palani, Tamil Nadu.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.root94tourstravels.com/services.html">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Page-specific: service detail rows */
+    .service-detail-row {
+      padding: 70px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .service-detail-row:last-of-type {
+      border-bottom: none;
+    }
+    .service-detail-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-md);
+      background: var(--gradient-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+    .service-detail-icon i {
+      font-size: 2.1rem;
+      color: var(--white);
+    }
+    .service-detail-row:nth-child(even) .service-detail-icon {
+      background: var(--gradient-orange);
+    }
+    .service-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 26px;
+    }
+    .service-feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.93rem;
+      color: var(--text-muted);
+    }
+    .service-feature-list li i {
+      color: var(--success-green);
+      margin-top: 3px;
+    }
+    .service-quick-nav {
+      position: sticky;
+      top: 100px;
+    }
+    .service-quick-nav a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      color: var(--text-dark);
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      transition: var(--transition);
+    }
+    .service-quick-nav a:hover,
+    .service-quick-nav a.active-link {
+      background: var(--gradient-orange);
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loading-screen">
+    <div class="loader-logo">Root<span>94</span></div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-root"></i>Root<span>94</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link btn-nav-book" href="booking.html">Book Now</a></li>
+          <li class="nav-item">
+            <button class="dark-toggle-btn" type="button" aria-label="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="page-header" style="background-image: url('images/services-header-bg.jpg');">
+    <div class="container page-header-content">
+      <h1 data-aos="fade-up">Our Services</h1>
+      <ul class="breadcrumb-custom" data-aos="fade-up" data-aos-delay="100">
+        <li><a href="index.html">Home</a></li>
+        <li class="separator">/</li>
+        <li class="current">Services</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============ SERVICES OVERVIEW INTRO ============ -->
+  <section class="section-padding-sm">
+    <div class="container">
+      <div class="section-title-wrap" data-aos="fade-up">
+        <div class="section-tag">Complete Travel Solutions</div>
+        <h2>Everything You Need For <span>Every Journey</span></h2>
+        <p>Root94 Tours & Travels offers a complete range of transport and tour services from Palani — explore each one below or jump directly using the quick menu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE DETAILS WITH SIDE NAV ============ -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Sticky Quick Nav -->
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="glass-card p-3 service-quick-nav" data-aos="fade-right">
+            <a href="#local-taxi"><i class="fas fa-taxi"></i> Local Taxi</a>
+            <a href="#outstation-taxi"><i class="fas fa-road"></i> Outstation Taxi</a>
+            <a href="#airport-pickup"><i class="fas fa-plane-arrival"></i> Airport Pickup & Drop</a>
+            <a href="#railway-pickup"><i class="fas fa-train"></i> Railway Pickup & Drop</a>
+            <a href="#bus-stand-pickup"><i class="fas fa-bus"></i> Bus Stand Pickup & Drop</a>
+            <a href="#temple-tours"><i class="fas fa-place-of-worship"></i> Temple Tour Packages</a>
+            <a href="#family-tours"><i class="fas fa-people-roof"></i> Family Tours</a>
+            <a href="#corporate-travel"><i class="fas fa-briefcase"></i> Corporate Travel</a>
+            <a href="#tempo-traveller"><i class="fas fa-shuttle-van"></i> Tempo Traveller Rental</a>
+            <a href="#hotel-booking"><i class="fas fa-hotel"></i> Hotel Booking Assistance</a>
+            <a href="#sightseeing"><i class="fas fa-binoculars"></i> Sightseeing Trips</a>
+            <a href="#all-india-tours"><i class="fas fa-map-marked-alt"></i> All India Tour Packages</a>
+          </div>
+        </div>
+
+        <!-- Service Detail Content -->
+        <div class="col-lg-9">
+
+          <!-- 1. LOCAL TAXI -->
+          <div class="service-detail-row" id="local-taxi">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-taxi"></i></div>
+                <h3>Local Taxi</h3>
+                <p class="text-muted">Need a quick, reliable ride around Palani? Our local taxi service covers everything from short errands to daily commutes, temple visits, and same-day round trips — all with transparent, meter-friendly pricing.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Available within Palani town & nearby areas</li>
+                  <li><i class="fas fa-check-circle"></i> Hourly and point-to-point booking options</li>
+                  <li><i class="fas fa-check-circle"></i> Clean sedans and hatchbacks on standby</li>
+                  <li><i class="fas fa-check-circle"></i> Quick WhatsApp booking confirmation</li>
+                </ul>
+                <a href="booking.html" class="btn-root94-primary"><i class="fas fa-calendar-check"></i> Book This Service</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-local-taxi.jpg" alt="Local Taxi Service in Palani" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. OUTSTATION TAXI -->
+          <div class="service-detail-row" id="outstation-taxi">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-road"></i></div>
+                <h3>Outstation Taxi</h3>
+                <p class="text-muted">Traveling beyond Palani? Our outstation taxis offer comfortable one-way and round-trip rides to any city in Tamil Nadu and across India, with experienced drivers who know the best routes.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> One-way and round-trip fare options</li>
+                  <li><i class="fas fa-check-circle"></i> Sedan, SUV, and tempo traveller choices</li>
+                  <li><i class="fas fa-check-circle"></i> Experienced drivers for long-distance routes</li>
+                  <li><i class="fas fa-check-circle"></i> Toll & permit charges clearly communicated upfront</li>
+                </ul>
+                <a href="booking.html" class="btn-root94-primary"><i class="fas fa-calendar-check"></i> Book This Service</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-outstation-taxi.jpg" alt="Outstation Taxi Service from Palani" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. AIRPORT PICKUP & DROP -->
+          <div class="service-detail-row" id="airport-pickup">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-plane-arrival"></i></div>
+                <h3>Airport Pickup & Drop</h3>
+                <p class="text-muted">Never worry about missing a flight or waiting around at arrivals. We provide punctual airport transfer service to and from Madurai, Coimbatore, and other major airports, with real-time flight tracking on request.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Coverage for Madurai & Coimbatore airports</li>
+                  <li><i class="fas fa-check-circle"></i> Driver waits with a name board at arrivals</li>
+                  <li><i class="fas fa-check-circle"></i> Flight delay buffer included, no extra charge</li>
+                  <li><i class="fas fa-check-circle"></i> Early morning & late-night pickups available</li>
+                </ul>
+                <a href="booking.html" class="btn-root94-primary"><i class="fas fa-calendar-check"></i> Book This Service</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-airport-pickup.jpg" alt="Airport Pickup and Drop Service" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. RAILWAY PICKUP & DROP -->
+          <div class="service-detail-row" id="railway-pickup">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-train"></i></div>
+                <h3>Railway Station Pickup & Drop</h3>
+                <p class="text-muted">We offer dependable pickup and drop service for all major railway stations near Palani, including Palani Road, Dindigul, and Madurai Junction, so your journey continues without delay.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Coverage for nearby major railway stations</li>
+                  <li><i class="fas fa-check-circle"></i> Train delay tracking on request</li>
+                  <li><i class="fas fa-check-circle"></i> Help with luggage handling</li>
+                  <li><i class="fas fa-check-circle"></i> Available for both arrival & departure trips</li>
+                </ul>
+                <a href="booking.html" class="btn-root94-primary"><i class="fas fa-calendar-check"></i> Book This Service</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-railway-pickup.jpg" alt="Railway Station Pickup and Drop Service" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. BUS STAND PICKUP & DROP -->
+          <div class="service-detail-row" id="bus-stand-pickup">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-bus"></i></div>
+                <h3>Bus Stand Pickup & Drop</h3>
+                <p class="text-muted">Arriving by bus or need a ride to catch one? We offer convenient transfers to and from the Palani bus stand and other nearby bus terminals, helping you connect smoothly to your next destination.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Quick pickup from Palani New & Old Bus Stands</li>
+                  <li><i class="fas fa-check-circle"></i> On-demand availability, even late at night</li>
+                  <li><i class="fas fa-check-circle"></i> Ideal for connecting onward journeys</li>
+                  <li><i class="fas fa-check-circle"></i> Affordable local fare rates</li>
+                </ul>
+                <a href="booking.html" class="btn-root94-primary"><i class="fas fa-calendar-check"></i> Book This Service</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-bus-stand-pickup.jpg" alt="Bus Stand Pickup and Drop Service" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. TEMPLE TOUR PACKAGES -->
+          <div class="service-detail-row" id="temple-tours">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-place-of-worship"></i></div>
+                <h3>Temple Tour Packages</h3>
+                <p class="text-muted">As a Palani-based agency, temple tours are at the heart of what we do. We organize trips to the Arupadai Veedu circuit, Madurai Meenakshi Temple, Rameswaram, and other sacred destinations across Tamil Nadu.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Arupadai Veedu (six abodes of Lord Murugan) circuit</li>
+                  <li><i class="fas fa-check-circle"></i> Knowledge of temple timings & festival schedules</li>
+                  <li><i class="fas fa-check-circle"></i> Multi-day and single-day options available</li>
+                  <li><i class="fas fa-check-circle"></i> Senior citizen & pilgrim-friendly vehicle choices</li>
+                </ul>
+                <a href="packages.html" class="btn-root94-primary"><i class="fas fa-suitcase-rolling"></i> View Temple Packages</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-temple-tours.jpg" alt="Temple Tour Packages from Palani" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. FAMILY TOURS -->
+          <div class="service-detail-row" id="family-tours">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-people-roof"></i></div>
+                <h3>Family Tours</h3>
+                <p class="text-muted">Planning a getaway with your loved ones? We design family-friendly itineraries with comfortable vehicles, safe routes, and enough flexibility for rest stops, sightseeing, and everyone's pace.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Child seat arrangement available on request</li>
+                  <li><i class="fas fa-check-circle"></i> Flexible itineraries with rest & meal stops</li>
+                  <li><i class="fas fa-check-circle"></i> Spacious SUVs and tempo travellers for larger families</li>
+                  <li><i class="fas fa-check-circle"></i> Hotel booking assistance included on request</li>
+                </ul>
+                <a href="booking.html" class="btn-root94-primary"><i class="fas fa-calendar-check"></i> Book This Service</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-family-tours.jpg" alt="Family Tour Packages" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. CORPORATE TRAVEL -->
+          <div class="service-detail-row" id="corporate-travel">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>Corporate Travel</h3>
+                <p class="text-muted">We provide reliable, punctual transport for businesses — from single-employee airport runs to multi-vehicle arrangements for company events, client visits, and corporate offsites.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Monthly billing options for regular corporate clients</li>
+                  <li><i class="fas fa-check-circle"></i> Professional, formally dressed drivers on request</li>
+                  <li><i class="fas fa-check-circle"></i> Multi-vehicle coordination for group events</li>
+                  <li><i class="fas fa-check-circle"></i> Priority booking for urgent business travel</li>
+                </ul>
+                <a href="contact.html" class="btn-root94-primary"><i class="fas fa-paper-plane"></i> Request Corporate Quote</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-corporate-travel.jpg" alt="Corporate Travel Service" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. TEMPO TRAVELLER RENTAL -->
+          <div class="service-detail-row" id="tempo-traveller">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-shuttle-van"></i></div>
+                <h3>Tempo Traveller Rental</h3>
+                <p class="text-muted">Traveling in a large group? Our tempo travellers come in 12 to 17-seater configurations — perfect for weddings, school trips, group pilgrimages, and big family functions.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> 12, 14, and 17-seater options available</li>
+                  <li><i class="fas fa-check-circle"></i> Pushback seating & music system in select vehicles</li>
+                  <li><i class="fas fa-check-circle"></i> Ideal for weddings, functions, and group pilgrimages</li>
+                  <li><i class="fas fa-check-circle"></i> Long-distance and multi-day rental options</li>
+                </ul>
+                <a href="fleet.html#tempo-traveller" class="btn-root94-primary"><i class="fas fa-shuttle-van"></i> View Tempo Travellers</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-tempo-traveller.jpg" alt="Tempo Traveller Rental Service" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. HOTEL BOOKING ASSISTANCE -->
+          <div class="service-detail-row" id="hotel-booking">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-hotel"></i></div>
+                <h3>Hotel Booking Assistance</h3>
+                <p class="text-muted">Not sure where to stay? We help you find and book comfortable, budget-friendly accommodations near your destination — from lodges close to temples to family-friendly resorts.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Recommendations based on budget & group size</li>
+                  <li><i class="fas fa-check-circle"></i> Assistance with lodges near major temples</li>
+                  <li><i class="fas fa-check-circle"></i> Combined taxi + stay package options</li>
+                  <li><i class="fas fa-check-circle"></i> Help with last-minute accommodation needs</li>
+                </ul>
+                <a href="contact.html" class="btn-root94-primary"><i class="fas fa-paper-plane"></i> Ask About Hotels</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-hotel-booking.jpg" alt="Hotel Booking Assistance" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. SIGHTSEEING TRIPS -->
+          <div class="service-detail-row" id="sightseeing">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-binoculars"></i></div>
+                <h3>Sightseeing Trips</h3>
+                <p class="text-muted">Want to explore beyond the main attraction? We organize guided sightseeing trips around your destination, covering hidden gems and popular spots alike, at a comfortable pace.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Half-day and full-day sightseeing options</li>
+                  <li><i class="fas fa-check-circle"></i> Local driver insights on lesser-known spots</li>
+                  <li><i class="fas fa-check-circle"></i> Flexible stop planning based on your interest</li>
+                  <li><i class="fas fa-check-circle"></i> Available as a standalone or add-on service</li>
+                </ul>
+                <a href="booking.html" class="btn-root94-primary"><i class="fas fa-calendar-check"></i> Book This Service</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-sightseeing.jpg" alt="Sightseeing Trips" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. ALL INDIA TOUR PACKAGES -->
+          <div class="service-detail-row" id="all-india-tours">
+            <div class="row align-items-center g-4">
+              <div class="col-md-7" data-aos="fade-up">
+                <div class="service-detail-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <h3>All India Tour Packages</h3>
+                <p class="text-muted">Dreaming of a trip beyond Tamil Nadu? We design custom multi-day tour packages covering top destinations across India — from Kerala backwaters to North Indian heritage circuits.</p>
+                <ul class="service-feature-list">
+                  <li><i class="fas fa-check-circle"></i> Customizable multi-state itineraries</li>
+                  <li><i class="fas fa-check-circle"></i> Combined travel, stay & sightseeing planning</li>
+                  <li><i class="fas fa-check-circle"></i> Group and family package options</li>
+                  <li><i class="fas fa-check-circle"></i> Dedicated trip coordinator for longer tours</li>
+                </ul>
+                <a href="packages.html" class="btn-root94-primary"><i class="fas fa-suitcase-rolling"></i> View All Packages</a>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                <img src="images/service-all-india-tours.jpg" alt="All India Tour Packages" loading="lazy" class="img-fluid rounded-4 shadow">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA SECTION ============ -->
+  <section class="section-padding bg-off-white">
+    <div class="container">
+      <div class="cta-section" data-aos="zoom-in">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2>Not Sure Which Service You Need?</h2>
+            <p>Tell us your travel plan on WhatsApp, and we'll recommend the best option for you.</p>
+          </div>
+          <div class="col-lg-4 text-end">
+            <a href="https://wa.me/918015514116" class="btn-root94-outline" style="border-color: var(--white); color: var(--white);" target="_blank"><i class="fab fa-whatsapp"></i> Chat With Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget">
+            <div class="footer-brand"><i class="fas fa-root"></i> Root<span>94</span></div>
+            <p>Ro94 Tours & Travels is Palani's trusted travel partner, offering local taxi, outstation trips, temple tours, and all-India travel packages. Your Journey, Our Responsibility.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/918015514116" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-widget">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="packages.html"><i class="fas fa-chevron-right"></i> Tour Packages</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h5>Our Services</h5>
+            <ul class="footer-links">
+              <li><a href="services.html#local-taxi"><i class="fas fa-chevron-right"></i> Local Taxi</a></li>
+              <li><a href="services.html#outstation-taxi"><i class="fas fa-chevron-right"></i> Outstation Taxi</a></li>
+              <li><a href="services.html#airport-pickup"><i class="fas fa-chevron-right"></i> Airport Pickup & Drop</a></li>
+              <li><a href="services.html#temple-tours"><i class="fas fa-chevron-right"></i> Temple Tour Packages</a></li>
+              <li><a href="services.html#tempo-traveller"><i class="fas fa-chevron-right"></i> Tempo Traveller Rental</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h5>Contact Info</h5>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Root94 Tours & Travels, Palani, Tamil Nadu, India</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:+918015514116" class="text-white text-decoration-none">+91 80155 14116</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:info@root94tourstravels.com" class="text-white text-decoration-none">info@root94tourstravels.com</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Available 24/7 for Bookings</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; <span class="current-year">2026</span> Root94 Tours & Travels. All Rights Reserved.</p>
+        <p class="mb-0 text-end">Designed & Developed with <i class="fas fa-heart text-orange"></i> for Travelers</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING BUTTONS ============ -->
+  <div class="floating-buttons">
+    <a href="#" id="floatWhatsapp" class="float-btn float-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#" id="floatCall" class="float-btn float-call" aria-label="Call Us">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="js/animation.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    // Highlight active quick-nav link on scroll
+    (function () {
+      var sections = document.querySelectorAll(".service-detail-row");
+      var navLinks = document.querySelectorAll(".service-quick-nav a");
+
+      if (!sections.length || !navLinks.length) return;
+
+      window.addEventListener("scroll", function () {
+        var current = "";
+        sections.forEach(function (section) {
+          var rect = section.getBoundingClientRect();
+          if (rect.top <= 160 && rect.bottom >= 160) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(function (link) {
+          link.classList.remove("active-link");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active-link");
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
